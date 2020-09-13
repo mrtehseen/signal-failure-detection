@@ -65,4 +65,8 @@ The model showed the average accuracy of 0.94 on the test data and average loss 
 ![](https://i.ibb.co/8mcr2vh/model-accuracy.png)
 
 ## Model Saving
- The model will is saved in .H5 format after training so it can be used later on the implementation on different devices, the model saves the weights and variables for operations to deduct inference on the different devices
+ The model will is saved in .H5 format after training so it can be used later on the implementation on different devices, the model saves the weights and variables for operations to deduct inference on the different devices.
+ 
+ [![Twitter](https://img.shields.io/twitter/follow/thetehseen.svg?style=social&label=Follow)](https://twitter.com/thetehseen/)
+![GitHub followers](https://img.shields.io/github/followers/mrtehseen?label=GitHub&style=social)
+
