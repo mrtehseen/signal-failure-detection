@@ -33,8 +33,36 @@
 ### RSRQ
  Reference Signal Received Quality is the ratio of usable signal to noise and interference measured in dBm. 
  RSRQ=RSRP-RSSI.
+ 
+ > Features.
 ![](https://i.ibb.co/fvnMMqB/features.png)
 
-> Features.
 
 #### The last column corresponds if the link failure occured or not, making it a classification prroblem.
+
+#### The variables included in the data set are receive power, receive signal to noise ratio, transmit power, link error rate, modulation scheme and time of the measurement, the received signal strength (RSS) in dBm, the carrier to interference (C / I) ratio measured in dB and at last the label data whether a signal failure occurred or not as (y=1 | y=0) where 1 defines cellular link failure while 0 describes normal signal parameters. These parameters are selected as a features for determining probable link failure as these signal values describes and withholds and associates with the reason when a signal failure occurs.
+
+## Model Selection
+
+ As Deep CNNs require intensive training, networks such as SSD, R-CNN and YOLO were evaluated as the detection frameworks for the CNN to be extended and fine-tuned, and MobileNet, Inception and ResNet were evaluated as base networks. 
+The selection of the base model for the object detection algorithms amongst these state-of-the-art models depends heavily on the speed versus performance payoff between the models. The speed and accuracy varies heavily between the different models as well as the map between the networks. According to this data Tiny YOLO is faster than object detection models built with SSD, but is inferior in detection performance, which is also the case between Faster R-CNN and SSD, where SSD is the faster but lower performing networking.
+ In a mobile environment, the FPS that the mobile device is able to perform computations in is crucial for the mobile experience. With a too complex and computationally expensive network, the device would struggle to run the application on more than 1 FPS. According to professional developers at Bontouch, a minimum around 2 FPS is required for a smooth mobile experience, which limited the base network to either MLP or CNN as Faster R-CNN has inferior speed on mobile devices. As for this training so we MLP for the training of the as it is known as sequential approach in keras library of TensorFlow.
+In TensorFlow, it is also known as Sequential estimator which determines the binary classification in Deep Learning where different perceptron forms to be a output function.
+
+### Tensorflow-Keras (Multi-Layer-Perceptron)
+ The model is trained on TensorFlow keras library which readily helps to easily compile a model on MLP where it specifies every detail of its execution. The Sequential model is a linear stack of layers.
+You create a Sequential model (MLP) by passing a list of layer instances to the constructor:
+The model needs to know what input shape it should expect. For this reason, the first layer in a Sequential model (and only the first, because following layers can do automatic shape inference) needs to receive information about its input shape.
+Before training a model, you need to configure the learning process, which is done via compile method. TensorFlow Keras models are trained on Numpy arrays of input data and labels. For training a model, you will typically use the fit function the compile method.
+
+#### The language used to develop TF model is Python (3.6+) and TensorFlow (1.19+) on Windows OS with JetBrains PyCharm Community Edition 2018.3.4 x64 as a IDE.
+
+## Model Evaluation
+ The model is evaluated on the test data split in the data processing phase where each data is chopped down to test the model and get its accuracy on the shelf. The mAP value served as a direct indicator of detection performance in terms of both class prediction and bounding box prediction, and as the base metric for evaluating model performance. As mAP is a commonly used metric, there are multiple open-source libraries and software packages available to evaluate the network mAP performance and TensorFlow has built-in support for calculating the mAP metric via TensorBoard during training and evaluation. By performing a series of experiments, enough data was gathered to evaluate the performance of the models via accuracy and loss which is predefined in the TensorFlow keras library.
+The model showed the average accuracy of 0.94 on the test data and average loss of 0.233 as described below:
+
+ > Accuracy.
+![](https://i.ibb.co/8mcr2vh/model-accuracy.png)
+
+## Model Saving
+ The model will is saved in .H5 format after training so it can be used later on the implementation on different devices, the model saves the weights and variables for operations to deduct inference on the different devices
