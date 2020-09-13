@@ -33,4 +33,8 @@
 ### RSRQ
  Reference Signal Received Quality is the ratio of usable signal to noise and interference measured in dBm. 
  RSRQ=RSRP-RSSI.
+![](https://i.ibb.co/fvnMMqB/features.png)
 
+> Features.
+
+#### The last column corresponds if the link failure occured or not, making it a classification prroblem.
