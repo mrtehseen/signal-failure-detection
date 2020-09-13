@@ -1,2 +1,2 @@
-# siggnal-failure-prediction
- Processing mobile devices signal data and generrating a machine learning model using deep learning to prredict link failure instaces using Keras and Tensorflow Lite
+# Signal Failure Prediction
+ Processing mobile devices signal data and generating a machine learning model using deep learning to predict link failure instances using Keras and Tensorflow Lite.
