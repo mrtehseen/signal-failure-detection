@@ -1,5 +1,6 @@
 # Signal Failure Prediction
 [![Deon badge](https://img.shields.io/badge/ethics%20checklist-deon-brightgreen.svg?style=popout-square)](http://deon.drivendata.org/)
+
  Cellular link failures cause poor user experience perceived as call drop or slowness/stall in data transfers. In this, I investigated a way to generate a model based on MLP (Multi-layer Perceptron) machine learning approach that can be used on Android Devices with the potential features that can predict link loss to a certain efficiency.
  
  
